@@ -26,7 +26,7 @@ public class Contactus {
     @Column(name="email")
     private String email;
 
-    @Column(name="message")
+    @Column(name="message", length = 1000)
     private String message;
 
     @Column(name = "date_created")

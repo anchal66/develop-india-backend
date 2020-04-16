@@ -20,10 +20,10 @@ public class Events {
     @Column(name = "event_name")
     private String eventName;
 
-    @Column(name = "event_description")
+    @Column(name = "event_description", length = 500)
     private String eventDescription;
 
-    @Column(name = "event_img_path")
+    @Column(name = "event_img_path",length = 500)
     private String eventImgPath;
 
     @Column(name = "date_created")
