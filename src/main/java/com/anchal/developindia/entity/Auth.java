@@ -10,24 +10,18 @@ import java.util.Date;
 @Entity
 @Table(name="blogs")
 @Data
-public class Blog {
+public class Auth {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "title")
-    private String title;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "author")
-    private String author;
-
-    @Column(name = "blog")
-    private String blog;
-
-    @Column(name = "img_url")
-    private String imgUrl;
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "date_created")
     @CreationTimestamp
