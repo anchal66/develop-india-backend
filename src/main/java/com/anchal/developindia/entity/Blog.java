@@ -23,7 +23,7 @@ public class Blog {
     @Column(name = "author")
     private String author;
 
-    @Column(name = "blog", length = 10000)
+    @Column(name = "blog", length = 1000)
     private String blog;
 
     @Column(name = "img_url", length = 500)
