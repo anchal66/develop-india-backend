@@ -17,13 +17,13 @@ public class Events {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "event_name")
+    @Column(name = "event_name", nullable = false)
     private String eventName;
 
-    @Column(name = "event_description", length = 500)
+    @Column(name = "event_description", length = 500, nullable = false)
     private String eventDescription;
 
-    @Column(name = "event_img_path",length = 500)
+    @Column(name = "event_img_path",length = 500, nullable = false)
     private String eventImgPath;
 
     @Column(name = "date_created")

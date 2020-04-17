@@ -17,16 +17,16 @@ public class Blog {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "title")
+    @Column(name = "title", nullable = false)
     private String title;
 
-    @Column(name = "author")
+    @Column(name = "author", nullable = false)
     private String author;
 
-    @Column(name = "blog", length = 1000)
+    @Column(name = "blog", length = 1000, nullable = false)
     private String blog;
 
-    @Column(name = "img_url", length = 500)
+    @Column(name = "img_url", length = 500, nullable = false)
     private String imgUrl;
 
     @Column(name = "date_created")
