@@ -6,6 +6,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name="blogs")
@@ -17,13 +18,17 @@ public class Blog {
     @Column(name = "id")
     private Long id;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "blog")
+    private Set<Comment> comment;
+
     @Column(name = "title")
     private String title;
 
     @Column(name = "author")
     private String author;
 
-    @Column(name = "blog", length = 5000)
+    @Lob
+    @Column(name = "blog")
     private String blog;
 
     @Column(name = "img_url", length = 500)
