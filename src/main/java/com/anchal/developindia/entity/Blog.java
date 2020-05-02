@@ -34,6 +34,9 @@ public class Blog {
     @Column(name = "img_url", length = 500)
     private String imgUrl;
 
+    @Column(name = "count")
+    private Long count;
+
     @Column(name = "date_created")
     @CreationTimestamp
     private Date dateCreated;
