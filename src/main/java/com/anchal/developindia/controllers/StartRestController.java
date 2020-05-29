@@ -5,11 +5,7 @@ import com.anchal.developindia.util.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class StartRestController {
@@ -20,12 +16,13 @@ public class StartRestController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public String startapp(){
+        System.out.println("Start APP");
         return "hello";
     }
 
-    @PostMapping("/api/auth")
+    @PostMapping("/auth")
     public String generateToken(@RequestBody AuthRequest authRequest) throws Exception{
         try{
             authenticationManager.authenticate(
